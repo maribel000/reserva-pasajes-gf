@@ -14,6 +14,7 @@ public class Servicio {
     private String origen;
     private String destino;
     private String empresaPrestadora;
+    private Integer numeroAsiento;
     private String horaSalida;
     private String fechaSalida;
     private String descripcionTipoServicio;
@@ -76,6 +77,20 @@ public class Servicio {
     }
 
     /**
+     * @return the numeroAsiento
+     */
+    public Integer getNumeroAsiento() {
+        return numeroAsiento;
+    }
+
+    /**
+     * @param numeroAsiento the numeroAsiento to set
+     */
+    public void setNumeroAsiento(Integer numeroAsiento) {
+        this.numeroAsiento = numeroAsiento;
+    }
+
+    /**
      * @return the horaSalida
      */
     public String getHoraSalida() {
@@ -131,6 +146,7 @@ public class Servicio {
         this.precio = precio;
     }
 
+    
 
    
     
