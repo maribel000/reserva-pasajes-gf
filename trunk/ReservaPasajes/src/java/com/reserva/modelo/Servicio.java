@@ -10,6 +10,7 @@ package com.reserva.modelo;
  * 
  */
 public class Servicio {
+
     private Number id;
     private String origen;
     private String destino;
@@ -145,9 +146,4 @@ public class Servicio {
     public void setPrecio(Number precio) {
         this.precio = precio;
     }
-
-    
-
-   
-    
 }
