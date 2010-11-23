@@ -70,6 +70,4 @@ public class Reserva extends Servicio {
     public void setClienteContratante(Cliente clienteContratante) {
         this.clienteContratante = clienteContratante;
     }
-
-    
 }
