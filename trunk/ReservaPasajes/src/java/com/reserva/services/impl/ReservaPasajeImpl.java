@@ -24,17 +24,19 @@ import javax.ejb.Stateless;
 public class ReservaPasajeImpl implements ReservaPasaje {
 
     public List<Servicio> obtenerServicios(String lugarO, String lugarD, String tipoTransporte, String empresa, Integer numeroAsiento, String fechaSalida, String horaSalida) {
+
+        // llenado de empresas
+        
         List<Servicio> listadoServicios = new ArrayList<Servicio>();
         List<Empresa> empresasPrestatarias = new ArrayList<Empresa>();
         List<Itinerario> itinerariosGenerales = new ArrayList<Itinerario>();
         List<Transporte> vehiculosTransporte = new ArrayList<Transporte>();
         List<Asiento> asientos = new ArrayList<Asiento>();
-        int indice = 0;
-
 
         Lugar lugarOrigen = new Lugar();
         Lugar lugarDestino = new Lugar();
 
+        // origen y destino
         lugarOrigen.setCiudad("CORDOBA");
         lugarOrigen.setDescripcion("CORDOBA-BUENOS AIRES");
         lugarOrigen.setLocalidad("CAPITAL");
@@ -47,6 +49,7 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         lugarDestino.setPais("ARGENTINA");
         lugarDestino.setProvincia("BUENOS AIRES");
 
+        // itinerario
         Itinerario i = new Itinerario();
         i.setOrigen(lugarOrigen);
         i.setDestino(lugarDestino);
@@ -55,24 +58,28 @@ public class ReservaPasajeImpl implements ReservaPasaje {
 
         itinerariosGenerales.set(1, i);
 
+        // transporte
         Transporte t = new Transporte();
         t.setDescripcion("BOEING 747");
         t.setTipo("AVION JUMBO");
 
-        
-        for (Asiento asiento : asientos) {
-            indice++;
+        // asientos
+        Asiento a = new Asiento();
+        a.setDisponible("SI");
+        a.setNumeroAsiento(1);
+        a.setUbicacion("PASILLO");
 
-            asiento.setDisponible("SI");
-            asiento.setNumeroAsiento(indice);
-            asiento.setUbicacion("PASILLO");
-
-            asientos.add(asiento);
+        asientos.add(a);
             
-        }
+        a.setDisponible("SI");
+        a.setNumeroAsiento(2);
+        a.setUbicacion("VENTANILLA");
+
+        asientos.add(a);
 
         t.setAsientos(asientos);
 
+        // empresa
         Empresa e = new Empresa();
 
         e.setItinerario(itinerariosGenerales);
@@ -81,17 +88,13 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         e.setTipoTransporte("AVION");
         e.setTransportes(vehiculosTransporte);
 
+        empresasPrestatarias.add(e);
+        
 
+        // hasta aca es el llenado de empresas...
 
+        
 
-
-        /*
-        for (Empresa empresa1 : empresasPrestatarias) {
-        empresa1.setDenominacion("AEROLINEAS ARGENTINAS");
-        empresa1.setItinerario();
-
-        }
-         */
         return listadoServicios;
 
 
