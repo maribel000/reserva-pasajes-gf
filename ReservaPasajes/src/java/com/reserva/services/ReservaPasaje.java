@@ -20,7 +20,7 @@ public interface ReservaPasaje {
             String lugarD,
             String tipoTransporte,
             String empresa,
-            Number numeroAsiento, //reemplazar por integer
+            Integer numeroAsiento,
             String fechaSalida,
             String horaSalida);
 
