@@ -20,12 +20,11 @@ public interface ReservaPasaje {
             String lugarD,
             String tipoTransporte,
             String empresa,
-            Number numeroAsiento,
+            Number numeroAsiento, //reemplazar por integer
             String fechaSalida,
             String horaSalida);
 
-    public void reservarPasaje(
+    public Reserva reservarPasaje(
             Servicio reservaServicio,
-            Cliente pasajero,
-            Reserva pasajeReservado);
+            Cliente pasajero);
 }
