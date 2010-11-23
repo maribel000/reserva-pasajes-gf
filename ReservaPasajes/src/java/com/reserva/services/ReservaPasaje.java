@@ -4,6 +4,8 @@
  */
 package com.reserva.services;
 
+import com.reserva.modelo.Cliente;
+import com.reserva.modelo.Reserva;
 import com.reserva.modelo.Servicio;
 import java.util.List;
 
@@ -18,6 +20,12 @@ public interface ReservaPasaje {
             String lugarD,
             String tipoTransporte,
             String empresa,
+            Number numeroAsiento,
             String fechaSalida,
             String horaSalida);
+
+    public void reservarPasaje(
+            Servicio reservaServicio,
+            Cliente pasajero,
+            Reserva pasajeReservado);
 }
