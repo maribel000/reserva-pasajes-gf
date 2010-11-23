@@ -29,6 +29,7 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         
         List<Servicio> listadoServicios = new ArrayList<Servicio>();
         List<Empresa> empresasPrestatarias = new ArrayList<Empresa>();
+
         List<Itinerario> itinerariosGenerales = new ArrayList<Itinerario>();
         List<Transporte> vehiculosTransporte = new ArrayList<Transporte>();
         List<Asiento> asientos = new ArrayList<Asiento>();
@@ -91,7 +92,11 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         empresasPrestatarias.add(e);
         
 
-        // hasta aca es el llenado de empresas...
+        // hasta aca es el llenado de empresas, ahora busco si hay alguna para prestar el servicio
+
+   
+
+
 
         
 
