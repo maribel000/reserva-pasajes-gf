@@ -8,11 +8,13 @@ import com.reserva.modelo.Cliente;
 import com.reserva.modelo.Reserva;
 import com.reserva.modelo.Servicio;
 import java.util.List;
+import javax.ejb.Local;
 
 /**
  *
  * @author curso
  */
+@Local
 public interface ReservaPasaje {
 
     public List<Servicio> obtenerServicios(

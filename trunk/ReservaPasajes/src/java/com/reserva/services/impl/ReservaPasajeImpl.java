@@ -16,11 +16,14 @@ import com.reserva.services.ReservaPasaje;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
+import javax.jws.WebService;
 
 /**
  *
  * @author usuario
  */
+@WebService
+@Stateless
 public class ReservaPasajeImpl implements ReservaPasaje {
 
     public List<Servicio> obtenerServicios(String lugarO, String lugarD, String tipoTransporte, String empresa, Integer numeroAsiento, String fechaSalida, String horaSalida) {
