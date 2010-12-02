@@ -31,6 +31,7 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         // llenado de empresas
         
         List<Servicio> listadoServicios = new ArrayList<Servicio>();
+/*
         List<Empresa> empresasPrestatarias = new ArrayList<Empresa>();
 
         List<Itinerario> itinerariosGenerales = new ArrayList<Itinerario>();
@@ -96,12 +97,13 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         
 
         // hasta aca es el llenado de empresas, ahora busco si hay alguna para prestar el servicio
+*/
 
-   
+        Servicio serv = new Servicio();
+        serv.setId(1);
+        serv.setOrigen("CORDOBA");
 
-
-
-        
+        listadoServicios.add(serv);
 
         return listadoServicios;
 
