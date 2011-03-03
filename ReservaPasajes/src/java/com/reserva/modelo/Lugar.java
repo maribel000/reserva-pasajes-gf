@@ -9,7 +9,7 @@ package com.reserva.modelo;
  * @author usuario
  */
 public class Lugar {
-
+    private Number id;
     private String descripcion;
     private String ciudad;
     private String localidad;
@@ -84,5 +84,19 @@ public class Lugar {
      */
     public void setPais(String Pais) {
         this.pais = Pais;
+    }
+
+    /**
+     * @return the id
+     */
+    public Number getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Number id) {
+        this.id = id;
     }
 }

@@ -8,6 +8,8 @@
         <data xmlns="http://www.netbeans.org/ns/j2ee-ejbjarproject/3">
             <name>ReservaPasajes</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
+            <included-library>file.reference.derby.jar</included-library>
+            <included-library>file.reference.derbyclient.jar</included-library>
             <source-roots>
                 <root id="src.dir" name="Source Packages"/>
             </source-roots>

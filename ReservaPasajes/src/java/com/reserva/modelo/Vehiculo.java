@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.reserva.modelo;
 
 /**
@@ -10,6 +9,8 @@ package com.reserva.modelo;
  * @author curso
  */
 public class Vehiculo {
+
+    private Number id;
     private String descripcion;
     private String tipo;
 
@@ -41,4 +42,17 @@ public class Vehiculo {
         this.tipo = tipo;
     }
 
+    /**
+     * @return the id
+     */
+    public Number getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Number id) {
+        this.id = id;
+    }
 }
