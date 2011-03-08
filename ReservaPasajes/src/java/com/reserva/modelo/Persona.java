@@ -12,7 +12,7 @@ public class Persona {
     private Number id;
     private String denominacion;
     private String email;
-    private String documento;
+    private Number documento;
     private String tipoDocumento;
     private String sexo;
 
@@ -44,19 +44,6 @@ public class Persona {
         this.email = email;
     }
 
-    /**
-     * @return the documento
-     */
-    public String getDocumento() {
-        return documento;
-    }
-
-    /**
-     * @param documento the documento to set
-     */
-    public void setDocumento(String documento) {
-        this.documento = documento;
-    }
 
     /**
      * @return the tipoDocumento
@@ -98,5 +85,19 @@ public class Persona {
      */
     public void setId(Number id) {
         this.id = id;
+    }
+
+    /**
+     * @return the documento
+     */
+    public Number getDocumento() {
+        return documento;
+    }
+
+    /**
+     * @param documento the documento to set
+     */
+    public void setDocumento(Number documento) {
+        this.documento = documento;
     }
 }
