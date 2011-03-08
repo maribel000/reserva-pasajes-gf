@@ -16,7 +16,6 @@ import com.reserva.services.ReservaPasaje;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
-import javax.jws.WebService;
 
 /**
  *
