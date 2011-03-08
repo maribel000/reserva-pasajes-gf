@@ -22,16 +22,17 @@ import javax.jws.WebService;
  *
  * @author usuario
  */
-@WebService
+
 @Stateless
 public class ReservaPasajeImpl implements ReservaPasaje {
 
     public List<Servicio> obtenerServicios(String lugarO, String lugarD, String tipoTransporte, String empresa, Integer numeroAsiento, String fechaSalida, String horaSalida) {
 
         // llenado de empresas
-        
+
         List<Servicio> listadoServicios = new ArrayList<Servicio>();
-/*
+
+
         List<Empresa> empresasPrestatarias = new ArrayList<Empresa>();
 
         List<Itinerario> itinerariosGenerales = new ArrayList<Itinerario>();
@@ -75,7 +76,7 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         a.setUbicacion("PASILLO");
 
         asientos.add(a);
-            
+
         a.setDisponible("SI");
         a.setNumeroAsiento(2);
         a.setUbicacion("VENTANILLA");
@@ -94,16 +95,17 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         e.setTransportes(vehiculosTransporte);
 
         empresasPrestatarias.add(e);
-        
+
 
         // hasta aca es el llenado de empresas, ahora busco si hay alguna para prestar el servicio
-*/
+
 
         Servicio serv = new Servicio();
-        serv.setId(1);
+        serv.setId(0);
         serv.setOrigen("CORDOBA");
 
         listadoServicios.add(serv);
+
 
         return listadoServicios;
 
@@ -111,6 +113,9 @@ public class ReservaPasajeImpl implements ReservaPasaje {
 
 
     }
+
+
+
 
     public Reserva reservarPasaje(Servicio reservaServicio, Cliente pasajero) {
         throw new UnsupportedOperationException("Not supported yet.");
