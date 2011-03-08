@@ -8,13 +8,13 @@ import com.reserva.modelo.Cliente;
 import com.reserva.modelo.Reserva;
 import com.reserva.modelo.Servicio;
 import java.util.List;
-import javax.ejb.Local;
+import javax.ejb.Remote;
 
 /**
  *
  * @author curso
  */
-@Local
+@Remote
 public interface ReservaPasaje {
 
     public List<Servicio> obtenerServicios(
@@ -25,7 +25,7 @@ public interface ReservaPasaje {
             Integer numeroAsiento,
             String fechaSalida,
             String horaSalida);
-
+    
     public Reserva reservarPasaje(
             Servicio reservaServicio,
             Cliente pasajero);
