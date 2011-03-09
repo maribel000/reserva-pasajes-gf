@@ -1,3 +1,19 @@
+drop table app.asiento;
+drop table app.persona;
+drop table app.lugar;
+drop table app.cliente;
+drop table app.itinerario;
+drop table app.servicio;
+drop table app.vehiculo;
+drop table app.iti_x_emp;
+drop table app.tra_x_emp;
+drop table app.empresa;
+drop table app.reserva;
+drop table app.asi_x_tra;
+drop table app.transporte;
+
+
+
 create table app.asiento(asi_numero_asiento integer,  asi_disponible char(1), asi_ubicacion char(50), primary key (asi_numero_asiento));
 create table app.persona(per_id integer, per_denominacion char(50), per_email char(50), per_documento char(8), per_tipo_documento char(4), per_sexo char(1), primary key (per_id));
 create table app.lugar(lug_id integer, lug_descripcion char(50), lug_localidad char(50), lug_provincia char(50), lug_pais char(50), primary key (lug_id));
