@@ -2,22 +2,19 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.reserva.services;
 
-import com.reserva.modelo.Cliente;
-import com.reserva.modelo.Reserva;
+package com.reserva.dao;
+
 import com.reserva.modelo.Servicio;
 import java.util.List;
-import javax.ejb.Remote;
 
 /**
  *
  * @author curso
  */
 
-public interface ReservaPasaje {
-
-    public List<Servicio> obtenerServicios(
+public interface ServicioDao {
+    public List <Servicio> obtenerServicios(
             String lugarO,
             String lugarD,
             String tipoTransporte,
@@ -25,8 +22,6 @@ public interface ReservaPasaje {
             Integer numeroAsiento,
             String fechaSalida,
             String horaSalida);
-    
-    public Reserva reservarPasaje(
-            Servicio reservaServicio,
-            Cliente pasajero);
+
+
 }

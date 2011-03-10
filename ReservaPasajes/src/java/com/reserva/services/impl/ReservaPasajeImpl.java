@@ -4,29 +4,25 @@
  */
 package com.reserva.services.impl;
 
-import com.reserva.modelo.Asiento;
 import com.reserva.modelo.Cliente;
-import com.reserva.modelo.Empresa;
-import com.reserva.modelo.Itinerario;
-import com.reserva.modelo.Lugar;
 import com.reserva.modelo.Reserva;
 import com.reserva.modelo.Servicio;
-import com.reserva.modelo.Transporte;
 import com.reserva.services.ReservaPasaje;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
+import javax.jws.WebService;
 
 /**
  *
  * @author usuario
  */
-
+@WebService
 @Stateless
 public class ReservaPasajeImpl implements ReservaPasaje {
 
     public List<Servicio> obtenerServicios(String lugarO, String lugarD, String tipoTransporte, String empresa, Integer numeroAsiento, String fechaSalida, String horaSalida) {
-
+/*
         // llenado de empresas
 
         List<Servicio> listadoServicios = new ArrayList<Servicio>();
@@ -107,7 +103,13 @@ public class ReservaPasajeImpl implements ReservaPasaje {
 
 
         return listadoServicios;
+ * */
 
+        List<Servicio> listadoServicios = new ArrayList<Servicio>();
+
+        
+
+        return listadoServicios;
 
 
 
