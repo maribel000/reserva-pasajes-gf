@@ -31,7 +31,7 @@ public class Conexion {
         try {
             String url = "jdbc:derby://localhost:1527/reserva";
             String up = "admin";
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
+            Object newInstance = Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
 
 
             conn = DriverManager.getConnection(url, up, up);

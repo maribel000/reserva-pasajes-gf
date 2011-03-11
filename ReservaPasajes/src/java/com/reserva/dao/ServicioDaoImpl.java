@@ -24,6 +24,7 @@ public class ServicioDaoImpl implements ServicioDao {
         List<Servicio> list = new ArrayList<Servicio>();
 
         Servicio s;
+
         try {
 
 
@@ -59,7 +60,7 @@ public class ServicioDaoImpl implements ServicioDao {
             Logger.getLogger(Servicio.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        return list;
+        return (List<Servicio>) list;
 
 
 
