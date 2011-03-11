@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 public interface ServicioDao {
-    public List <Servicio> getAll();
+    public List<Servicio> getAll();
 
 
 }
