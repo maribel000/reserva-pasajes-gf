@@ -5,11 +5,11 @@
 package com.reserva.services.impl;
 
 import com.reserva.dao.ServicioDao;
+import com.reserva.dao.ServicioDaoImpl;
 import com.reserva.modelo.Cliente;
 import com.reserva.modelo.Reserva;
 import com.reserva.modelo.Servicio;
 import com.reserva.services.ReservaPasaje;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.jws.WebService;
@@ -106,11 +106,27 @@ public class ReservaPasajeImpl implements ReservaPasaje {
         return listadoServicios;
  * */
 
-        List<Servicio> listadoServicios = new ArrayList<Servicio>();
+        
+/*
+String lugarO,
+            String lugarD,
+            String tipoTransporte,
+            String empresa,
+            Integer numeroAsiento,
+            String fechaSalida,
+            String horaSalida)
+ * ("CORDOBA",
+                                        "ALTA GRACIA",
+                                        "COLECTIVO",
+                                        1,
+                                        "10/11/2010",
+                                         "10:20"
+                                        );
+ *
+ * */
 
-        //ServicioDao s = new ServicioDao("CORDOBA","ALTA GRACIA", "COLECTIVO")
-
-        return listadoServicios;
+        ServicioDao serv = new ServicioDaoImpl();
+        return (List) serv.getAll();
 
 
 

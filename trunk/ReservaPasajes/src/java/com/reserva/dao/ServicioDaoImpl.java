@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class ServicioDaoImpl implements ServicioDao {
 
-    public  List <Servicio> obtenerServicios(String lugarO, String lugarD, String tipoTransporte, String empresa, Integer numeroAsiento, String fechaSalida, String horaSalida) {
+    public  List <Servicio> getAll() {
 
         List<Servicio> list = new ArrayList<Servicio>();
 
@@ -27,20 +27,29 @@ public class ServicioDaoImpl implements ServicioDao {
         try {
 
 
-            String sql = "select ser_id , ser_origen, ser_destino , ser_empresa_prestadora , ser_numero_asiento , ser_hora_salida, ser_fecha_salida , ser_descr_tipo_serv , ser_precio  from app.servicios";
+            String sql = "select ser_id , " +
+                                "ser_origen, " +
+                                "ser_destino , " +
+                                "ser_empresa_prestadora , " +
+                                "ser_numero_asiento , " +
+                                "ser_hora_salida, " +
+                                "ser_fecha_salida , " +
+                                "ser_descr_tipo_serv , " +
+                                "ser_precio  " +
+                                "from app.servicios";
             Conexion c = Conexion.get();
             ResultSet rs = c.getResultSet(sql);
             while(rs.next()){
                 s = new Servicio();
-                s.setId(rs.getInt("ser_id"));
-                s.setDescripcionTipoServicio(rs.getString("ser_descr_tipo_serv"));
-                s.setDestino(rs.getString("ser_destino"));
-                s.setEmpresaPrestadora(rs.getString("ser_empresa_prestadora"));
-                s.setFechaSalida(rs.getString("ser_fecha_salida"));
-                s.setHoraSalida(rs.getString(rs.getString("ser_hora_salida")));
-                s.setNumeroAsiento(rs.getInt("ser_numero_asiento"));
-                s.setOrigen(rs.getString("ser_origen"));
-                s.setPrecio(rs.getFloat("ser_precio"));
+                s.setId(                        rs.getInt("ser_id"));
+                s.setDescripcionTipoServicio(   rs.getString("ser_descr_tipo_serv"));
+                s.setDestino(                   rs.getString("ser_destino"));
+                s.setEmpresaPrestadora(         rs.getString("ser_empresa_prestadora"));
+                s.setFechaSalida(               rs.getString("ser_fecha_salida"));
+                s.setHoraSalida(                rs.getString("ser_hora_salida"));
+                s.setNumeroAsiento(             rs.getInt("ser_numero_asiento"));
+                s.setOrigen(                    rs.getString("ser_origen"));
+                s.setPrecio(                    rs.getFloat("ser_precio"));
 
 
                  list.add(s);
