@@ -14,14 +14,7 @@ import java.util.List;
  */
 
 public interface ServicioDao {
-    public List <Servicio> obtenerServicios(
-            String lugarO,
-            String lugarD,
-            String tipoTransporte,
-            String empresa,
-            Integer numeroAsiento,
-            String fechaSalida,
-            String horaSalida);
+    public List <Servicio> getAll();
 
 
 }

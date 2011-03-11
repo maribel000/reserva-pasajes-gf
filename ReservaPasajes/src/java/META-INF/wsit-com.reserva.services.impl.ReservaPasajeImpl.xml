@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ReservaPasajeImplService" targetNamespace="http://impl.services.reserva.com/" xmlns:tns="http://impl.services.reserva.com/"
+ >
+    <message name="obtenerServicios"/>
+    <message name="obtenerServiciosResponse"/>
+    <message name="reservarPasaje"/>
+    <message name="reservarPasajeResponse"/>
+    <portType name="ReservaPasajeImpl">
+        <operation name="obtenerServicios">
+            <input message="tns:obtenerServicios"/>
+            <output message="tns:obtenerServiciosResponse"/>
+        </operation>
+        <operation name="reservarPasaje">
+            <input message="tns:reservarPasaje"/>
+            <output message="tns:reservarPasajeResponse"/>
+        </operation>
+    </portType>
+    <binding name="ReservaPasajeImplPortBinding" type="tns:ReservaPasajeImpl">
+        <operation name="obtenerServicios">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="reservarPasaje">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="ReservaPasajeImplService">
+        <port name="ReservaPasajeImplPort" binding="tns:ReservaPasajeImplPortBinding"/>
+    </service>
+</definitions>
+
