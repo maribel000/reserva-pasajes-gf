@@ -15,15 +15,17 @@ import java.util.List;
  */
 
 public interface ReservaPasaje {
-
+/*
     public List<Servicio> obtenerServicios(
             String lugarO,
             String lugarD,
             String tipoTransporte,
             String empresa,
-            Integer numeroAsiento,
+            int numeroAsiento,
             String fechaSalida,
             String horaSalida);
+  *  */
+    public List<Servicio> obtenerServicios();
     
     public Reserva reservarPasaje(
             Servicio reservaServicio,

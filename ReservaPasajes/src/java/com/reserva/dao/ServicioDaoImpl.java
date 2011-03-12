@@ -19,6 +19,7 @@ import java.util.logging.Logger;
  */
 public class ServicioDaoImpl implements ServicioDao {
 
+
     public  List <Servicio> getAll() {
 
         List<Servicio> list = new ArrayList<Servicio>();
