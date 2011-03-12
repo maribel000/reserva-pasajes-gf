@@ -11,18 +11,24 @@ import com.reserva.modelo.Reserva;
 import com.reserva.modelo.Servicio;
 import com.reserva.services.ReservaPasaje;
 import java.util.List;
-import javax.ejb.Stateless;
 import javax.jws.WebService;
-
+import javax.ejb.Stateless;
 /**
  *
  * @author usuario
  */
-@WebService
-@Stateless
-public class ReservaPasajeImpl implements ReservaPasaje {
 
-    public List<Servicio> obtenerServicios(String lugarO, String lugarD, String tipoTransporte, String empresa, Integer numeroAsiento, String fechaSalida, String horaSalida) {
+@Stateless
+@WebService
+public class ReservaPasajeImpl implements ReservaPasaje {
+/*
+    public List<Servicio> obtenerServicios(String lugarO, 
+            String lugarD,
+            String tipoTransporte,
+            String empresa,
+            int numeroAsiento,
+            String fechaSalida,
+            String horaSalida) {
 
         ServicioDao serv = new ServicioDaoImpl();
         
@@ -31,6 +37,13 @@ public class ReservaPasajeImpl implements ReservaPasaje {
 
 
     }
+  * */
+
+     public List<Servicio> obtenerServicios(){
+        ServicioDao serv = new ServicioDaoImpl();
+
+        return (List<Servicio>) serv.getAll();
+     }
 
 
 
