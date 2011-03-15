@@ -13,7 +13,7 @@ public class Itinerario {
     private Lugar origen;
     private Lugar destino;
     private String horarioPartida;
-    private Number distanciaKm;
+    private Integer distanciaKm;
 
     /**
      * @return the origen
@@ -61,14 +61,14 @@ public class Itinerario {
     /**
      * @return the distanciaKm
      */
-    public Number getDistanciaKm() {
+    public Integer getDistanciaKm() {
         return distanciaKm;
     }
 
     /**
      * @param distanciaKm the distanciaKm to set
      */
-    public void setDistanciaKm(Number distanciaKm) {
+    public void setDistanciaKm(Integer distanciaKm) {
         this.distanciaKm = distanciaKm;
     }
 

@@ -18,7 +18,7 @@ public class Main {
         ServicioDao serv = new ServicioDaoImpl();
 
         for (Servicio p : serv.getAll()) {
-            System.out.println(p.getEmpresaPrestadora());
+            System.out.println(p.getEmpresaPrestadora()+" "+p.getPrecio() );
 
         }
     }

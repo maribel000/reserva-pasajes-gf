@@ -10,7 +10,7 @@ package com.reserva.modelo;
  * @author usuario
  */
 public class Cliente extends Persona{
-    private Number id;
+ 
     private String numeroTarjetaCredito;
 
     /**
@@ -27,19 +27,7 @@ public class Cliente extends Persona{
         this.numeroTarjetaCredito = numeroTarjetaCredito;
     }
 
-    /**
-     * @return the id
-     */
-    public Number getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(Number id) {
-        this.id = id;
-    }
+ 
 
 
 }
