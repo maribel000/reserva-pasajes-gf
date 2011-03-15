@@ -11,7 +11,7 @@ package com.reserva.modelo;
  */
 public class Servicio {
 
-    private Number id;
+    private Integer id;
     private String origen;
     private String destino;
     private String empresaPrestadora;
@@ -19,19 +19,19 @@ public class Servicio {
     private String horaSalida;
     private String fechaSalida;
     private String descripcionTipoServicio;
-    private Number precio;
+    private Float precio;
 
     /**
      * @return the id
      */
-    public Number getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Number id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -136,14 +136,18 @@ public class Servicio {
     /**
      * @return the precio
      */
-    public Number getPrecio() {
+    public Float getPrecio() {
         return precio;
     }
 
     /**
      * @param precio the precio to set
      */
-    public void setPrecio(Number precio) {
+    public void setPrecio(Float precio) {
         this.precio = precio;
     }
+
+    
+
+ 
 }

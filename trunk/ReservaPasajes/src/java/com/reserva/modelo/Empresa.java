@@ -12,25 +12,13 @@ import java.util.List;
  */
 public class Empresa extends Persona {
 
-    private Number id;
+
     private String tipoTransporte;
     private List<Itinerario> itinerario;
     private Double precioPorKm;
     private List<Transporte> transportes;
 
-    /**
-     * @return the id
-     */
-    public Number getId() {
-        return id;
-    }
 
-    /**
-     * @param id the id to set
-     */
-    public void setId(Number id) {
-        this.id = id;
-    }
 
     /**
      * @return the tipoTransporte

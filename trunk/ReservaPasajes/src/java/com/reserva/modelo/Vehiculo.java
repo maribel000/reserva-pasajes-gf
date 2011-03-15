@@ -10,7 +10,7 @@ package com.reserva.modelo;
  */
 public class Vehiculo {
 
-    private Number id;
+    private Integer id;
     private String descripcion;
     private String tipo;
 
@@ -45,14 +45,14 @@ public class Vehiculo {
     /**
      * @return the id
      */
-    public Number getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Number id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }

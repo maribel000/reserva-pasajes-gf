@@ -9,10 +9,10 @@ package com.reserva.modelo;
  * @author usuario
  */
 public class Persona {
-    private Number id;
+    private Integer id;
     private String denominacion;
     private String email;
-    private Number documento;
+    private Integer documento;
     private String tipoDocumento;
     private String sexo;
 
@@ -76,28 +76,28 @@ public class Persona {
     /**
      * @return the id
      */
-    public Number getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Number id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     /**
      * @return the documento
      */
-    public Number getDocumento() {
+    public Integer getDocumento() {
         return documento;
     }
 
     /**
      * @param documento the documento to set
      */
-    public void setDocumento(Number documento) {
+    public void setDocumento(Integer documento) {
         this.documento = documento;
     }
 }

@@ -10,24 +10,12 @@ package com.reserva.modelo;
  */
 public class Reserva extends Servicio {
 
-    private Number Id;
+
     private String estado;
     private Servicio servicioReservado;
     private Cliente clienteContratante;
 
-    /**
-     * @return the Id
-     */
-    public Number getId() {
-        return Id;
-    }
 
-    /**
-     * @param Id the Id to set
-     */
-    public void setId(Number Id) {
-        this.Id = Id;
-    }
 
     /**
      * @return the estado
