@@ -8,9 +8,9 @@ package com.reserva.modelo;
  *
  * @author curso
  */
-public class Reserva extends Servicio {
+public class Reserva  {
 
-
+    private Integer id;
     private String estado;
     private Servicio servicioReservado;
     private Cliente clienteContratante;
@@ -57,5 +57,19 @@ public class Reserva extends Servicio {
      */
     public void setClienteContratante(Cliente clienteContratante) {
         this.clienteContratante = clienteContratante;
+    }
+
+    /**
+     * @return the id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
