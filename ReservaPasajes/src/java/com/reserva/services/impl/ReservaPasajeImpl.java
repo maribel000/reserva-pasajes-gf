@@ -11,8 +11,8 @@ import com.reserva.modelo.Reserva;
 import com.reserva.modelo.Servicio;
 import com.reserva.services.ReservaPasaje;
 import java.util.List;
-import javax.jws.WebService;
 import javax.ejb.Stateless;
+import javax.jws.WebService;
 /**
  *
  * @author usuario

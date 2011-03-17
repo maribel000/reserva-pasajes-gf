@@ -63,5 +63,37 @@ public class Conexion {
     }
 
 
+ public ResultSet doDML (String sql) throws SQLException{
+     PreparedStatement pstmt = null;
+     pstmt = conn.prepareStatement(sql);
+     return pstmt.executeQuery();
+
+
+     
+ }
+
+
+ public void iniTransaction() throws SQLException{
+     conn.setAutoCommit(false);
+ }
+
+ public void finTransaction() throws SQLException{
+     conn.setAutoCommit(true);
+
+ }
+
+ public void commit() throws SQLException{
+     conn.commit();
+
+ }
+
+ public void rollback() throws SQLException{
+     conn.rollback();
+ }
+
+
+
+ 
+ 
 }
 
